@@ -71,8 +71,8 @@ public class ReadExcelServiceImpl implements ReadExcelService {
 
 	private static final String SYSTEM = "System";
 	private static final String TENANTID = "ch.chandigarh";
-	private static final String ES_APPROVED = "ES_APPROVED";
-	private static final String APPROVE = "APPROVE";
+	//private static final String ES_APPROVED = "ES_APPROVED";
+	//private static final String APPROVE = "APPROVE";
 	private static final String ES_DRAFTED = "ES_DRAFTED";
 	private static final String PROPERTY_MASTER = "PROPERTY_MASTER";
 
@@ -902,8 +902,8 @@ public class ReadExcelServiceImpl implements ReadExcelService {
 						}
 						if (isNumeric(excelValues.get(2))) {
 							AuctionBidder auctionBidder = AuctionBidder.builder().auctionId(excelValues.get(0))
-									.state(ES_APPROVED)
-									.action(APPROVE)
+									.state("")
+									.action("")
 									.bidderName(excelValues.get(1))
 									.depositedEMDAmount(new BigDecimal(excelValues.get(2)))
 									.depositDate(convertStrDatetoLong(excelValues.get(3)))
